@@ -1,0 +1,8 @@
+Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = Bottom
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{"
+       }
