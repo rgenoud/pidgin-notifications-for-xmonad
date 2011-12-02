@@ -26,7 +26,8 @@ from HTMLParser import HTMLParser
 
 # this may be a command line parameter...
 # it's use to clean xmobar afer x seconds
-message_timeout = 5
+# 0 means no timeout
+message_timeout = 30
 
 
 def show_message(account, sender, message, conversation, flags):
@@ -87,7 +88,9 @@ bus.add_signal_receiver(show_message,
                         signal_name="ReceivedChatMsg")
 
 loop = gobject.MainLoop()
-periodic_timer = PerodicTimer(message_timeout)
+
+if message_timeout:
+    periodic_timer = PerodicTimer(message_timeout)
 
 loop.run()
 
