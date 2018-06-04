@@ -1,9 +1,0 @@
-The python script pidgin_evt_dump.py plugs itself on dbus and simply dumps
-every pidgin messages.
-If the output of this script is sent on xmobar, it becomes a simple and
-wonderful notification plugin for pidgin :)
-
-xmobar-bottom is the configuration file I use for xmobar
-
-the whole thing is lauched with the command :
-pidgin_evt_dump.py | xmobar /home/$USER/.xmonad/xmobar-bottom
